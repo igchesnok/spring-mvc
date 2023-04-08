@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Car</title>
+  <style>table th, table td {padding: 10px;}</style>
+</head>
+
+<body>
+  <h1> Реализация таблиц с помощью thymeleaf</h1>
+
+  <table th:border="1">
+    <tr>
+      <th>модель</th>
+      <th>цвет</th>
+      <th>серия</th>
+    </tr>
+
+    <tr th:each="lst : ${list}">
+      <td th:utext="${lst.brand}">brand</td>
+      <td th:utext="${lst.color}">color</td>
+      <td th:utext="${lst.series}">series</td>
+    </tr>
+
+  </table>
+
+</body>
+
+</html>
